@@ -5,6 +5,7 @@ import { render } from 'react-dom';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 import { Card, CardHeader, CardText } from 'material-ui/Card';
+import { Dialog } from 'material-ui/Dialog'
 
 export default class VideoComponent extends Component {
     constructor(props) {
@@ -96,21 +97,21 @@ export default class VideoComponent extends Component {
         this.setState({ hasJoinedRoom: false, localMediaAvailable: false });
     }
 
-    // attachTracks(tracks, container) {
-    //     tracks.forEach(track => {
-    //         container.appendChild(track.attach());
-    //     });
-    // }
-
     attachTracks(tracks, container) {
-        tracks.forEach(function (track) {
-            this.attachTrack(track, container);
+        tracks.forEach(track => {
+            container.appendChild(track.attach());
         });
     }
 
-    attachTrack(track, container) {
-        container.appendChild(track.attach());
-    }
+    // attachTracks(tracks, container) {
+    //     tracks.forEach(function (track) {
+    //         this.attachTrack(track, container);
+    //     });
+    // }
+
+    // attachTrack(track, container) {
+    //     container.appendChild(track.attach());
+    // }
 
     detachTracks(tracks) {
         tracks.forEach(track => {

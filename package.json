@@ -16,7 +16,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "twilio": "^3.42.2",
-    "twilio-video": "^2.3.0"
+    "twilio-video": "^1.20.1"
   },
   "scripts": {
     "build": "./node_modules/.bin/webpack",
